@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #171717;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            display: flex;
+            position: fixed;
+            top: 0;
+            border-bottom: 1px solid white;
+            color: white;
+            background-color: #28282B;
+            height: 40px;
+            width: 100vw;
+            align-items: center;
+            font-size: 134%;
+        }
+
+        #username{
+            margin: 0px 20px 0px 20px;
+            color: red;
+            font-size: 124%;
+        }
+
+        li {
+            list-style: none;
+            margin: 0 20px 0 20px;
+            cursor: pointer;
+            color: white;
+            text-align: center;
+        }
+
+        li:hover{
+            text-shadow: 0px 0px 4px white;
+        }
+        
+        #mode-chng-icon{
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            margin: 0 5px 0 auto ;
+            
+        }
+        
+        #container{
+            margin: 80px 30px 30px 30px;
+            display: grid;
+            justify-content: space-around;
+            grid-template-columns: repeat(auto-fit, 200px);
+            grid-template-rows: auto;
+            grid-gap: 100px;
+        }
+        
+        .content{
+            background-color: #28282B;
+            box-shadow: 0px 0px 6px 2px white;
+        }
+        
+        /* .content:hover{
+            box-shadow: 0px 0px 6px 4px white;
+        } */
+
+        .content-item{
+            display: block;
+            text-align: center;
+            margin: 7px auto;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .Download{color: #4ccb51;}
+        .Delete{color: red;}
+        .filename{
+            color: white;
+            margin: 0 7px;
+        }
+
+        #mobile-navbar{display: none;}
+
+        @media only screen and (max-width: 700px) {
+            #navbar{display: none;}
+            #mobile-navbar{
+                display: block;
+                position: sticky;
+                top: 0; 
+                height: 40px;
+                background-color: #28282B;
+                border-bottom: 1px solid white;
+            }
+            #home{
+                display: flex;
+                align-items: center;
+            }
+            #mob-nav-icon{
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                margin: 5px;
+            }
+            #mob-nav-username{
+                margin: 0 auto 0 auto;
+                color: red;
+                font-size: 130%;
+            }
+            #mode-chng-icon{
+                margin: 0;
+            }
+            #nav-links{
+                display: none;
+                background-color: #28282B;
+            }
+            #nav-links li{
+                margin-bottom: 4px;
+                font-size: 115%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <span id="username">RakshankVerma</span>
+        <li>Logout</li>
+        <li>Delete Account</li>
+        <li>About</li>
+        <img id="mode-chng-icon" src="light-mode.png" onclick="ToggleMode()">
+    </div>
+    <div id="mobile-navbar">
+        <div id="home">
+            <img id="mob-nav-icon" src="menu-rounded.png" onclick="openMenu()">
+            <span id="mob-nav-username">RakshankVerma</span>
+            <img id="mode-chng-icon" src="light-mode.png" onclick="ToggleMode()">
+        </div>
+        <div id="nav-links">
+            <li>Logout</li>
+            <li>Delete Account</li>
+            <li>About</li>
+        </div>
+    </div>
+    <div id="container">
+        <div class="content">
+            <img class="content-item" src="file.png" alt="">
+            <a class="content-item filename" href="#">DSA by Narsimha Karumanchi. Hey my name is Rakshank Verma.</a>
+            <a class="content-item Download" href="#">Download</a>
+            <a class="content-item Delete" href="#">Delete</a>
+        </div>
+        <div class="content">
+            <img class="content-item" src="img.png" alt="">
+            <a class="content-item filename" href="#">DSAbyNarsimhaKarumanchi.HeymynameisRakshankVerma.</a>
+            <a class="content-item Download" href="#">Download</a>
+            <a class="content-item Delete" href="#">Delete</a>
+        </div>
+        <div class="content">
+            <img class="content-item" src="file.png" alt="">
+            <a class="content-item filename" href="#">DSA by Narsimha Karumanchi. Hey my name is Rakshank Verma.</a>
+            <a class="content-item Download" href="#">Download</a>
+            <a class="content-item Delete" href="#">Delete</a>
+        </div>
+    </div>
+</body>
+<script>
+    function ToggleMode() {
+        let content = document.getElementsByClassName("content");
+        let filename = document.getElementsByClassName("filename");
+        let modechngicon = document.getElementById("mode-chng-icon");
+        if (modechngicon.src == 'http://127.0.0.1:5500/light-mode.png') {
+            modechngicon.src = "dark-mode.png";
+            document.body.style.backgroundColor = "white";
+            for(let i=0; i<content.length; i++){
+                filename[i].style.color = "black";
+                content[i].style.backgroundColor = "#fbf0da";
+                content[i].style.boxShadow = "0px 0px 6px 2px grey";
+            }
+        }
+        else {
+            modechngicon.src = "light-mode.png";
+            document.body.style.backgroundColor = "#171717";
+            for(let i=0; i<content.length; i++){
+                filename[i].style.color = "white";
+                content[i].style.backgroundColor = "#28282B";
+                content[i].style.boxShadow = "0px 0px 6px 2px white";
+            }
+        }
+    }
+
+    function openMenu(){
+        let menu = document.getElementById("nav-links");
+        if(menu.style.display == "block"){
+            menu.style.display = "none";
+        }
+        else{
+            menu.style.display = "block";
+        }
+    }
+</script>
+
+</html>

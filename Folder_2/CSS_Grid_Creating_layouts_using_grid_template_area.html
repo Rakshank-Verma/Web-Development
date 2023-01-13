@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer'
+            ;
+        }
+        .item{
+            border: 2px solid black;
+            background-color: rgb(188, 225, 226);
+        }
+        #navbar{
+            grid-area: navbar;
+        }
+        #section{
+            grid-area: section;
+        }
+        #aside{
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="navbar">
+            home about contact us
+        </div>
+        <div class="item" id="section">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt veniam, debitis, consequuntur nobis perferendis dolorem et repudiandae saepe fuga eveniet praesentium voluptas.
+        </div>
+        <div class="item" id="aside">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet est beatae quo?
+        </div>
+        <footer class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, corporis.</footer>
+        <!-- <div class="item">Item-1</div>
+        <div class="item">Item-2</div>
+        <div class="item">Item-3</div>
+        <div class="item">Item-4</div>
+        <div class="item">Item-5</div>
+        <div class="item">Item-6</div>
+        <div class="item">Item-7</div>
+        <div class="item">Item-8</div>
+        <div class="item">Item-9</div>
+        <div class="item">Item-10</div>
+        <div class="item">Item-11</div>
+        <div class="item">Item-12</div>
+        <div class="item">Item-13</div>
+        <div class="item">Item-14</div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Welcome to console");
+        // Type Conversion
+        let Var=34;
+        Var=String(34);
+        console.log(Var, (typeof Var));
+
+        let booleanVar=String(true);
+        console.log(booleanVar, (typeof booleanVar));
+
+        let date=new Date();
+        console.log(date);
+        // By converting into string we can apply string operation on arr and on above all 
+        let arr= String([1,2,3,5]);
+        console.log(arr, (typeof arr));
+        console.log(arr.length, (typeof arr));
+
+        // Also convert to string by toString
+        let i = 3;
+        console.log(i.toString());
+
+        let stri=Number("2563");
+        stri=Number("25l");
+        stri= Number(true);
+        stri=Number([2,5,8,9,6,8]);
+        console.log(stri, (typeof stri)); //NaN = Not a Number
+
+        let no = parseInt('25');
+        console.log(no, (typeof no));
+        no = parseFloat('25.36');
+        console.log(no, (typeof no));
+        console.log(no.toFixed(5), (typeof no));
+
+        // Type Coercion
+        let mystr="698";
+        let mynum = 58;
+        console.log(mystr+mynum);
+
+        </script>
+</body>
+</html>

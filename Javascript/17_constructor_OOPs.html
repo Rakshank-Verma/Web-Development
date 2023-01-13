@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function generalCar(givenName, givenSpeed)
+        {
+            this.name = givenName;
+            this.speed = givenSpeed;
+            this.run = function(){
+                console.log('car is running');
+            }
+        }
+        car1 = new generalCar('maruti', 40);
+        console.log(car1);
+    </script>
+</body>
+</html>

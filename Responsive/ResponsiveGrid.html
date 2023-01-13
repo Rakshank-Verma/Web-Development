@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        .items{
+            background-color: coral;
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: 100px 100px;
+            /* grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); */
+            /* grid-auto-rows: minmax(100px, 200px); */
+            grid-auto-rows: minmax(100px, min-content);
+            grid-template-areas: "header header header"
+                                 "main section1 aside"
+                                 "main section2 aside"
+                                 "footer footer footer";
+        }
+        @media only screen and (max-width: 611px) {
+            .container{
+                grid-template-areas: "header header"
+                                     "main section1"
+                                     "main section2"
+                                     "aside aside"
+                                     "footer footer";
+            }
+        }
+        .item-1{grid-area: header;}
+        .item-2{grid-area: aside;}
+        .item-3{
+            opacity: .3;
+            color: white;
+            grid-area: main;
+            background-image: url("bg1.jpg");
+            background-size: 100% 100%;
+            background-attachment: scroll;
+        }
+        .item-4{grid-area: section1;}
+        .item-5{grid-area: section2;}
+        .item-6{grid-area: footer;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item-1">
+            Item1
+        </div>
+        <div class="items item-2">
+            Item2
+        </div>
+        <div class="items item-3">
+            Item3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi, illum cupiditate quo quaerat animi explicabo a ad, impedit voluptates atque aliquid. Corrupti, omnis numquam accusamus sapiente repudiandae fugiat blanditiis! Iste ipsa earum temporibus ducimus ipsam harum possimus, itaque, impedit laboriosam soluta dolorum odio illo adipisci sequi. Accusantium ad explicabo eveniet. Dolorem omnis nisi eligendi vitae voluptatibus rem, ipsam ipsum, corporis nam quod modi! Quas pariatur similique optio corrupti iste beatae praesentium sequi culpa porro quaerat veniam unde laboriosam ad distinctio, accusamus cumque est aut atque, velit fugit expedita deserunt dolore, cupiditate nemo! Laboriosam enim quam laborum aliquam autem id iusto vitae cum non harum aut architecto omnis aspernatur culpa alias ipsa dolorum, sit, incidunt sint blanditiis. Dignissimos praesentium nisi accusantium corrupti ipsam excepturi sapiente nesciunt quibusdam architecto. Non exercitationem similique sequi obcaecati, perferendis dignissimos expedita dolore aliquam iure dolorum explicabo quas necessitatibus sit ratione doloremque facere voluptates labore. Debitis atque ullam fugiat error fugit natus, odio, blanditiis voluptatum sed asperiores numquam veritatis autem alias dolore qui suscipit aliquam aliquid neque esse quas incidunt similique. Itaque architecto, quidem provident debitis accusamus illum omnis cupiditate beatae! Ipsam architecto qui, repellat distinctio numquam odit facere, impedit labore, expedita delectus temporibus. Laboriosam, eos.
+        </div>
+        <div class="items item-4">
+            Item4
+        </div>
+        <div class="items item-5">
+            Item5
+        </div>
+        <div class="items item-6">
+            Item6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. A voluptatibus officia magni ipsam impedit earum corrupti iure explicabo. Numquam fugiat suscipit natus adipisci non dolor dolore. Voluptas hic accusamus in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt nostrum quia ab, dolor quas, quaerat voluptatibus recusandae, voluptatum neque quam sint! Suscipit quo iste, sequi dolorem atque impedit quasi dolore laboriosam architecto autem ut, libero eligendi fugit, odit rem eius beatae nihil? Animi aperiam rem dolores, fugit id perferendis.
+        </div>
+    </div>
+</body>
+</html>

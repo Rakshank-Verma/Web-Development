@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #hamburger{
+            border: 1px solid black;
+            border-radius: 7px;
+            width: 33px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        div.burger {
+            width: 25px;
+            height: 3px;
+            margin: 4px;
+            background-color: black;
+        }
+
+        #navbar{
+            display: none;
+            /* position: absolute; */
+            width: 100vw;
+            background-color: aqua;
+            animation-name: menuItems;
+            animation-duration: 2.1s;
+            animation-timing-function: ease;
+        }
+        @keyframes menuItems{
+            from{
+                height: 0;
+            }
+            to{
+                height: 58px;
+            }
+        }
+        ul{
+            /* display: flex; */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            margin: 2px 7px ;
+            text-align: center;
+        }
+        #home, #contact, #about{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="hamburger">
+            <div class="burger"></div>
+            <div class="burger"></div>
+            <div class="burger"></div>
+        </div>
+        <div id="navbar">
+            <ul>
+                <li id="home">Home</li>
+                <li id="contact">Contact</li>
+                <li id="about">About Us</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById("hamburger").onclick = function(){
+            let nav = document.getElementById("navbar").style;
+            if(nav.display === "none"){
+                nav.display = "block";
+                setTimeout(() => {
+                    document.getElementById("home").style.display = "block";
+                }, 700);
+                setTimeout(() => {
+                    document.getElementById("contact").style.display = "block";
+                }, 1400);
+                setTimeout(() => {
+                    document.getElementById("about").style.display = "block";
+                }, 2100);
+            }
+            else{
+                nav.display = "none";
+                document.getElementById("home").style.display = "none";
+                document.getElementById("contact").style.display = "none";
+                document.getElementById("about").style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

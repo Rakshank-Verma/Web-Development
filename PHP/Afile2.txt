@@ -1,0 +1,2 @@
+This is Afile2.txt.
+This is second line in Afile2.txt.This is being appended

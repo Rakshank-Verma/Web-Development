@@ -1,0 +1,13 @@
+<script>
+    fetch('https://api.covid19api.com/summary').then((apidata)=>{
+        console.log(apidata);
+        return apidata.json(); // To convert a json data to javascript object
+    }).then((actualdata)=>{
+        console.log(actualdata);
+        console.log(actualdata.Countries[77]);
+        console.log(actualdata.Countries[77].Country);
+        document.write(actualdata.Countries[77].Country);
+    }).catch((error)=>{
+        console.log(error);
+    });
+</script>

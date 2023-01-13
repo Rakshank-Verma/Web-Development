@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+    <style>
+        .container{
+            border-color: brown;
+            border-style: solid;
+            background-color: burlywood;
+            border-width: 5px;
+            width: 800px;
+            margin: auto;
+            padding: 100px;
+        }
+        a:active{
+            background-color: rgb(129, 104, 219);
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .btn{
+            background-color:forestgreen;
+            border-width: 2px;
+            border-style: solid;
+            padding: 4px;
+            cursor:pointer;
+            font-size: 15px;
+            border-radius: 4px;
+            border-color: blueviolet;
+        }
+        a:hover{
+            border-color:blue;
+            background-color: darkgrey;
+            color: darkred;
+            font-family: cursive;
+            font-size: 20px;
+        }
+        button:hover{
+            border-color:blue;
+            background-color: darkgrey;
+            color: darkred;
+            font-family: cursive;
+            font-size: 20px;
+        }
+        a:visited{
+            color:black;
+            background-color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>Styling links and buttons in CSS</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi est voluptate ducimus accusamus inventore impedit cupiditate quis, quos, et consectetur, iure nihil adipisci praesentium aliquam ut dicta minima veniam laudantium.</p>
+        <a href="https://instagram.com" class="btn">Read more</a>
+        <button class="btn">Contact Us</button>
+        <!-- <header>yijkdjskf</header> -->
+    </div>
+</body>
+</html>

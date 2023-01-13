@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 400px;
+            width: 100%;
+            border: 2px solid black;
+            display: flex;
+
+
+            /* flex properties for flex container */
+
+            flex-direction: column;
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+
+            /* flex-flow: row-reverse wrap; */
+            /* can set both direction and wrap properties(it's a shorthand) */
+
+            /* justify-content: center; */
+            /* justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: space-around; */
+
+            /* align-items: center; */
+            /* align-items: stretch;     If forgotten then watch video from 21:00*/
+        }
+
+        .item {
+            background-image: linear-gradient(to left bottom,#36DF78, #73FDA5);
+            /* background-color: tomato; */
+            /* border: 2px solid red; */
+            border-radius: 10px;
+            margin: 7px;
+            width: 100px;
+            height: 100px;
+            padding: 2px;
+        }
+
+        #item1 {
+            /* flex properties for flex item */
+
+            order: 2;
+            /* flex-grow: 2; */
+            /* flex-shrink: 4; */
+        }
+
+        #item2 {
+            /* order: 4; */
+            /* flex-grow: 3; */
+            /* flex-shrink: 3; */
+
+            /* when flex direction set to row, then fles basis control width */
+            /* when flex direction set to column, then fles basis control height */
+            flex-basis: 200px;
+
+        }
+
+        #item3 {
+            /* flex-grow: 43; */
+
+            /* shorthand for grow */
+            /* flex: grow shrink basis */
+            /* flex: 0 2 400px; */
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="item1">first</div>
+        <div class="item" id="item2">second</div>
+        <div class="item" id="item3">third</div>
+        <!-- <div class="item" id="item4">fourth</div>
+        <div class="item" id="item5">fifth</div>
+        <div class="item" id="item6">sixth</div>  -->
+    </div>
+    <aside>
+        Hello World
+    </aside>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            /* to make variable globally we need to use this :root */
+            --color: orange;
+            --color2: skyblue;
+        }
+        .box{
+            /* css variables are local */
+            --color:orange; 
+            width: 200px;
+            height: 200px;
+            background-color:var(--color);
+            border: 3px solid black;
+            margin: 5px 5px;
+            box-shadow: 4px 4px var(--color);
+        }
+        .container{
+            background-color: var(--color2);
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

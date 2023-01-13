@@ -1,0 +1,103 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 2vh;
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.navbar {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+}
+
+.logo {
+    height: 100%;
+    width: 100px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.item {
+    list-style: none;
+    width: auto;
+    margin-left: 10px;
+    width: 190px;
+}
+
+.navitem:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+.navitem {
+    border-radius: 50px;
+    border: 2px solid black;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    font-size: 1.4em;
+    color: white;
+}
+
+h1{
+    flex-grow: 1;
+    color: white;
+    text-align: end;
+    text-decoration: underline;
+    margin-right: 2.5%;
+}
+
+.content {
+    /* background-color: blue; */
+    width: 80vw;
+    display: grid;
+    grid-template-columns: minmax(min-content, 1fr) 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin: auto;
+    text-align: center;
+}
+
+a.contitem {
+    margin: 10px 0px 10px 0px;
+    color: black;
+    font-size: 150%;
+    text-decoration: none;
+}
+
+a.delbtn {
+    text-decoration: none;
+    font-size: 130%;
+    margin-top: 13px;
+    color: red;
+}
+
+form.renameform {
+    display: none;
+    margin-top: 12px;
+}
+
+input.newNameBtn {
+    margin-top: 12px;
+}
+
+#subFiles {
+    margin-top: 30px;
+}
+
+#SubmitForm{
+    width: 33vw;
+    margin: auto;
+}

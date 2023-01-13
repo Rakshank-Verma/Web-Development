@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div class="container">
+        <!-- comment -->
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id="myul">
+                <li class="childul" id="fui">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul" id="lui">list </li>
+                <li class="childul">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+
+    <script>
+        let element = document.createElement('li');
+        let text = document.createTextNode('I am here');
+        element.appendChild(text);
+        //add a class name to the li element
+        element.className = 'childul';
+        element.id = 'createdLi';
+        element.setAttribute('title', 'mytitle');
+        // element.innerText = 'Hello, This is Rakshank Verma';
+        // element.innerHTML = '<b>Hello, This is Rakshank Verma</b>';
+
+        let ul = document.querySelector('ul.this');
+        ul.appendChild(element);
+        console.log(ul);
+        console.log(element);
+        
+        let elem2 = document.createElement('h3');
+        elem2.id = 'elem2';
+        elem2.className = 'elem2';
+        let tnode = document.createTextNode('This is a created node for elem2');
+        elem2.appendChild(tnode);
+        element.replaceWith(elem2);
+        
+        let myul = document.getElementById('myul');
+        myul.replaceChild(element, document.getElementById('fui'));
+        myul.removeChild(document.getElementById('lui'));
+        
+        let pr = elem2.getAttribute('class');
+        console.log(elem2, pr);
+        pr = elem2.hasAttribute('class');
+        console.log(pr);
+        
+        elem2.removeAttribute('id');
+        elem2.setAttribute('title', 'mytitle');
+        
+    </script>
+
+</body>
+</html>

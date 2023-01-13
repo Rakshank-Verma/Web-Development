@@ -1,0 +1,26 @@
+<script>
+// const funA = () => {
+//     console.log("FunA");
+// }
+
+// const funA = () => {
+//     setTimeout(function(){
+//         console.log("FunA");
+//         funB();
+//     }, 3000)
+// }
+// const funB = () => {
+//     console.log("FunB");
+// }
+// funA();
+
+const perOne = (friend, callback) => {
+    console.log(`I will call you back ${friend}`);
+    callback();
+}
+const perTwo = () => {
+    console.log("See, I called you back");
+}
+perOne("Ritik", perTwo);
+  
+</script>
